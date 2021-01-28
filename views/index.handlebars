@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h1 class="title">Burgers!</h1>
+</nav>
+
+  <div class="row justify-content-center rowTop">
+    <div class="col-4">
+      <div class="card myCard">
+        <h2>Burgers that haven't been eaten!</h2>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-block devour=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card myCard">
+        <h2>Burgers that have been devoured!</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-block devour=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 style="text-align: center;">Add a Burger:</h2>
+<div class="row justify-content-center">
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bu">Burger Name:</label>
+    <input type="text" id="bu" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Ready to eat?</label><br>
+    <input type="radio" name="devoured" value="0"> Ready to Eat!
+  </div>
+
+  <button type="submit">Add burger</button>
+</form>
+</div>

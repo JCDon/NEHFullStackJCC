@@ -1,0 +1,37 @@
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+.title {
+  margin: 0 auto;
+  color: orange;
+}
+
+.myCard {
+  width: 24rem !important;
+}
+
+.rowTop {
+  padding: 20px;
+}
+
+body {
+  background-color: #faebd7 !important;
+}
+  
